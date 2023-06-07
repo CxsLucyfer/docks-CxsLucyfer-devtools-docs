@@ -1,0 +1,196 @@
+{{+bindTo:partials.standard_devtools_article}}
+<p class="caution">
+  <strong style="font-weight: normal; font-size: 110%; display:block;">The DevTools docs have moved!</strong>
+  For the latest tutorials, docs and updates <a href="https://developers.google.com/web/tools/chrome-devtools">head over to the new home of Chrome DevTools</a>.
+</p>
+
+<h1>Settings</h1>
+
+
+
+  <p>
+    <strong>To modify the Settings in DevTools:</strong>
+    <ul>
+      <li>Click on the Settings cog <img src="../images/gear.png" alt="gear"> and open up the General Settings pane to make changes. Alternatively, you can use the shortcut <span class="kbd">?</span> to open to Settings pane too.</li>
+    </ul>
+  </p>
+
+  <div class="screenshot">
+    <img src="settings-files/general-settings.png">
+  </div>
+
+<div class="collapsible">
+  <h2 id="general">General</h2>
+
+  <h4>Disable cache</h4>
+  <p>Prevents the caching of resources <strong>ONLY</strong> for pages which have DevTools open. This will not disable caching if the DevTools are closed.</p>
+
+
+  <h4>Disable JavaScript</h4>
+  <p>Immediately suspends all JavaScript from running on the tab running the instance of DevTools which has this checked.</p>
+
+  <p class="note"><strong>Note:</strong> Both the Disable cache and Disable JavaScript settings will <strong>ONLY</strong> apply when DevTools is open. When it is open, for the page which has the DevTools open.</p>
+
+
+  <h4>Enable Ctrl + 1-9 shortcuts to switch panels</h4>
+  <p>You are able to use <span class="kbd">Ctrl</span> + <span class="kbd">1-9</span> shortcuts to jump to specific tabs in Chrome when multiple tabs are open, with tabs 1-8 and 9 being the last tab if more than 9 are open. This setting will enable DevTools to function in the same way, so you are able to switch between panels quickly.</p>
+
+  <p class="note"><strong>Note:</strong> Enabling this may cause conflicts with shortcut keys that are used by other applications.</p>
+
+  <h3 id="appearance">Appearance</h3>
+
+  <h4>Split panels vertically when docked to right</h4>
+  <p>Enabling this will change the layout of the panels so the main section is stacked on top of the sidebar sections. You may find this useful when there is not enough horizontal space when they are side-by-side which is the case for smaller screens.</p>
+
+  <div class="screenshot">
+    <img src="settings-files/dock-to-right.png">
+  </div>
+
+
+  <h3 id="elements">Elements</h3>
+
+  <h4>Color format</h4>
+  <ul>
+    <li>As authored - <strong>(how the code was written in the stylesheet)</strong></li>
+    <li>HEX: <code>#DAC0DE</code></li>
+    <li>RGB: <code>rgb(128, 255, 255)</code></li>
+    <li>HSL: <code>hsl(300, 80%, 90%)</code></li>
+  </ul>
+
+  <div class="screenshot">
+    <img src="settings-files/color-format-settings.png">
+  </div>
+
+  <p>The <strong>color format</strong> setting lets you control how the color codes are displayed in the <strong>Styles Sidebar</strong> of the Elements panel. In addition to the Settings option for controlling the color format, you can click on the gear icon at the top of the Styles Sidebar to change the format of color codes.</p>
+
+  <div class="screenshot">
+    <img src="settings-files/color-picker-format.png">
+  </div>
+
+  <p>Selecting <strong>As authored</strong> will use the color format for properties as defined in the stylesheet.</p>
+
+  <h4>Show user agent styles</h4>
+  <p>You may find it useful to show <strong>user agent styles</strong> in the Styles Sidebar of the Elements panel.</p>
+
+  <div class="screenshot">
+    <img src="settings-files/show-user-agent-styles.png">
+  </div>
+
+  <p>The <strong>user agent</strong> refers to the browser. Each browser implements a default stylesheet consisting of basic style rules which are applied to DOM Elements in a page. If you've ever had a difficult time removing white-space between two elements, for example, it may have been because of the user agent stylesheet adding a default margin or padding to that particular type of element.</p>
+
+  <h4>Word wrap</h4>
+  <p>As with any text editor you can choose to wrap long lines of code in the Elements panel.</p>
+
+
+  <h4>Show Shadow DOM</h4>
+  <p>With <a href="http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/">Shadow DOM</a>, elements can get a new kind of node associated with them. This new kind of node is called a <strong>shadow root</strong>. An element that has a shadow root associated with it is called a shadow host. The child nodes of a shadow host isn't rendered; the content of the shadow root is rendered instead.</p>
+
+  <div class="screenshot">
+    <img src="settings-files/show-shadow-dom.png">
+  </div>
+
+  <ul>
+    <li><a href="http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-201/">Shadow DOM 201</a></li>
+    <li><a href="http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-301/">Shadow DOM 301</a></li>
+    <li><a href="http://www.polymer-project.org/platform/shadow-dom.html">Shadow DOM Polyfill</a></li>
+    <li><a href="http://updates.html5rocks.com/2013/03/Visualizing-Shadow-DOM-Concepts">Visualizing Shadow DOM Concepts</a></li>
+    <li><a href="http://blogs.adobe.com/webplatform/2013/04/03/defining-presentational-boxes-with-shadow-dom/">Define presentational boxes using shadow DOM</a></li>
+  </ul>
+
+  <h4>Show rulers</h4>
+  <p>This will display a ruler overlay along the top, left and bottom sides of the viewport.</p>
+
+  <div class="screenshot">
+    <img src="settings-files/show-rulers.png">
+  </div>
+
+
+  <h3 id="sources">Sources</h3>
+
+  <h4>Search in content scripts</h4>
+  <p><a href="http://developer.chrome.com/extensions/content_scripts.html">Content scripts</a> are JavaScript files contained within Chrome extensions that run in the context of web pages but from a protected scope that is completely separate from ordinary page JavaScript. As such, content scripts and page scripts cannot interact with each other in an ordinary way.</p>
+
+  <div class="screenshot">
+    <img src="settings-files/search-content-scripts.png">
+  </div>
+
+  <p>When looking at the <strong>Content Scripts</strong> tab in the Sources panel you will see both the scripts added by extensions (<em>or by <a href="http://www.chromium.org/developers/design-documents/user-scripts">User Scripts</a> which are compiled into extensions in Chrome</em>), and also content scripts that are built-in parts of the browser, specifically the API that extensions can use.</p>
+
+  <p class="note"><strong>Note:</strong> When developing Chrome apps or extensions enable this setting so you can search within these native API scripts, otherwise it is not useful having it enabled.</p>
+
+  <h4>Enable JS source maps</h4>
+  <p>If you have code which is concatenated and minified it is difficult to tell what file a piece of code may be in when you need to debug it. Enabling this setting is useful for <a href="javascript-debugging.html#source-maps">debugging JavaScript</a> and <a href="http://www.youtube.com/watch?v=HijZNR6kc9A#t=1m32s">working with Source maps</a> in general.</p>
+
+  <div class="screenshot">
+    <img src="settings-files/js-source-maps.png">
+  </div>
+
+  <h4 id="css-source-maps">Enable CSS source maps</h4>
+  <p>Enables Source Maps for CSS files generated using a preprocessor (for example, Sass).</p>
+
+  <p>For details see <a href="css-preprocessors.html">Working with CSS Preprocessors</a>.</p>
+
+  <h4>Auto-reload generated CSS</h4>
+  <p>Only used if <b>Enable CSS source maps</b> is turned on. Determines whether generated CSS files should be reloaded when the source file is saved.</p>
+
+  <h4>Detect Indentation</h4>
+  <p>Specifies how code is indented when editing in DevTools:</p>
+
+  <ul>
+    <li>2 spaces</li>
+    <li>4 spaces</li>
+    <li>8 spaces</li>
+    <li>Tab character</li>
+  </ul>
+
+  <h4>Show whitespace characters</h4>
+  <p>This will show dots for spaces and tab characters in the Sources panel.</p>
+
+
+  <h3 id="profiler">Profiler</h3>
+
+  <h4>High resolution CPU profiling</h4>
+  <p>Enables you to zoom into the graph to view it by a tenth of a millisecond on Flame charts.</p>
+
+
+  <h3 id="console">Console</h3>
+
+  <h4>Log XMLHttpRequests</h4>
+  <p>Display XHR request objects in the console which expand to show details of the request.</p>
+
+  <h4>Preserve log upon navigation</h4>
+  <p>When navigating through multiple pages of a site you may choose to not clear the console logs with each page load so you can view the history of output across pages.</p>
+
+  <p class="note"><strong>Note:</strong> Both of these settings can be changed by right clicking on the console.</p>
+
+  <div class="screenshot">
+    <img src="settings-files/console-right-click.png">
+  </div>
+
+
+  <h3 id="extensions">Extensions</h3>
+
+  <strong>Open links in:</strong> <code>a panel chosen automatically</code>
+  <p></p>
+
+
+</div>
+<div class="collapsible">
+  <h2 id="workspace">Workspace</h2>
+
+  <p><a href="workspaces.html">Workspaces</a> allow you to select <strong>custom directories</strong> in your file system which are always available for you to edit within the <strong>Sources panel</strong>. This can be one specific project directory or a directory that contains multiple different projects within it.</p>
+
+  <p>To use this feature it open the <strong>Workspaces tab</strong> via the Settings pane. Here you will see an <strong>Add Folder</strong> link allowing you to add local directories for editing (eg: project root directories).</p>
+
+  <div class="screenshot">
+    <img src="settings-files/workspace.png">
+  </div>
+
+  <p>Once you've added a folder directory, you will be able to view, edit and save changes to files within it anytime you are working in the Sources panel. All changes to files will persist down to local file contained in directory.</p>
+
+  <p>In addition to adding a file system for your Workspace, you are also able to add file <strong>Mappings</strong> individual file urls to the path of the file on your local machine.</p>
+
+
+
+</div>
+{{/partials.standard_devtools_article}}
